@@ -1,11 +1,10 @@
 <template>
     <div class="input-email-wrapper">
         <slot></slot>
-        <label for="email-input">
+        <form action="">
             <input type="email" name="email-input" placeholder="Enter email address">
             <button class="submit-button">Schedule a Demo</button>
-            <submitButton/>
-        </label>
+        </form>
     </div>
 </template>
 <script>
@@ -14,10 +13,9 @@ export default {
     }
 </script>
 <style scoped>
-    label{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .input-email-wrapper{
+        width: 327px;
+        margin: auto;
     }
     input{
         border: none;
@@ -50,4 +48,23 @@ export default {
         background-color: var(--primary-btn-hover);
         cursor: pointer;
     }
+@media screen and (min-width:768px) {
+    form{
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        width: 445px;
+
+    }
+    input{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .submit-button{
+        position: relative;
+        right: 20px;
+        top: 4px;
+        width: 50%;
+    }
+}
 </style>

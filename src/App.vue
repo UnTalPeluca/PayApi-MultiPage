@@ -1,7 +1,10 @@
 <template>
   <Header/>
   <router-view/>
-  <InputEmail><p class="title">Ready to start?</p></InputEmail>
+  <div class="footer-input">
+    <p class="title">Ready to start?</p>
+    <InputEmail/>
+  </div>
   <Footer/>
 </template>
 <script>
@@ -49,7 +52,7 @@ body{
   background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: -16%;
+  background-position-y: -500px;
 }
 a{
   color: var(--text-color-alt);
@@ -77,5 +80,35 @@ button{
 }
 Footer{
   margin-top: 75px;
+}
+@media screen and (min-width:768px) {
+  .title{
+    font-size: 5.6rem;
+    letter-spacing: -0.37px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width:1280px) {
+  body{
+    background-position-x: 750px;
+    background-position-y: -200px;
+  }
+  body p, .title{
+      text-align: start;
+  }
+  .footer-input{
+    max-width: 1110px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-input > *{
+    padding: 0;
+  }
+  .footer-input .title{
+    margin: 0;
+    margin-right: 200px;
+  }
 }
 </style>

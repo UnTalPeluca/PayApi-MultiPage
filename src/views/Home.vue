@@ -9,13 +9,15 @@
       </div>
     </section>
     <section id="second-section">
-      <div class="trademarks">
-        <img src="@/assets/shared/desktop/tesla.svg" alt="">
-        <img src="@/assets/shared/desktop/microsoft.svg" alt="">
-        <img src="@/assets/shared/desktop/hewlett-packard.svg" alt="">
-        <img src="@/assets/shared/desktop/oracle.svg" alt="">
-        <img src="@/assets/shared/desktop/google.svg" alt="">
-        <img src="@/assets/shared/desktop/nvidia.svg" alt="">
+      <div class="section-wrapper">
+        <div class="trademarks">
+          <img src="@/assets/shared/desktop/tesla.svg" alt="">
+          <img src="@/assets/shared/desktop/microsoft.svg" alt="">
+          <img src="@/assets/shared/desktop/hewlett-packard.svg" alt="">
+          <img src="@/assets/shared/desktop/oracle.svg" alt="">
+          <img src="@/assets/shared/desktop/google.svg" alt="">
+          <img src="@/assets/shared/desktop/nvidia.svg" alt="">
+        </div>
       </div>
       <div class="content-wrapper">
         <h2 class="title">Who we work with</h2>
@@ -113,6 +115,9 @@ export default {
   #second-section{
     background-color: var(--bg-secondary);
     padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .trademarks {
     display: grid;
@@ -120,7 +125,7 @@ export default {
     grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
     margin: auto;
     place-items: center;
-    max-width: 327px;
+    width: 327px;
   }
   .trademarks > img{
     filter: brightness(10);
@@ -177,8 +182,13 @@ export default {
     padding-top: 25px;
   }
   /* 4 */
-  .feature-mini{
-    padding-bottom: 50px;
+  #fourth-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 50px;
+    padding-bottom:100px;
   }
   .title-mini{
     font-size: 1.8rem;
@@ -189,8 +199,136 @@ export default {
     padding-top: 25px;
   }
   .description-mini{
-    line-height: -0.12px;
+    letter-spacing: -0.12px;
     line-height: 2.5rem;
     padding-top: 20px;
   }
+@media screen and (min-width:768px) {
+  .title{
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.37px;
+  }
+  .content-wrapper{
+    width: 573px;
+  }
+  #first-section p{
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .trademarks{
+    width: 536px;
+  }
+  .trademarks > img:nth-child(even){
+    justify-self: inherit;
+  }
+  .trademarks > img{
+    transform: scale(1);
+  }
+  #second-section p{
+    max-width: 456px;
+    margin: auto;
+  }
+  #fourth-section{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    justify-content: space-between;
+    max-width: clamp(727px, 80vw, 1110px);
+    padding-bottom:125px;
+  }
+  .feature-mini .content-wrapper{
+    width: 227px;
+  }
+}
+@media screen and (min-width:1280px) {
+  .content-wrapper{
+    width: 550px;
+  }
+  #first-section{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1110px;
+    margin: auto;
+    top: 25px;
+  }
+  #first-section .content-wrapper{
+    margin: 0;
+    text-align: start;
+    padding-top: 100px;
+  }
+  #first-section .input-email-wrapper{
+    margin: 0;
+  }
+  #first-section .content-wrapper .title{
+
+    font-size: 7.2rem;
+  }
+  #first-section img{
+    width: 400px;
+  }
+  #first-section p{
+    padding-left: 25px;
+  }
+  
+  #second-section{
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: start;
+    padding: 100px 0;
+  }
+  #second-section .title{
+    padding: 0;
+  }
+  #second-section .content-wrapper p{
+    padding-top: 25px;
+    margin: 0;
+  }
+  #second-section button{
+    margin-top: 30px;
+  }
+  #second-section .content-wrapper, .trademarks{
+    width: 550px;
+    margin: 0;
+  }
+  #third-section{
+    max-width: 1110px;
+    margin: auto;
+    padding-top: 100px;
+  }
+  #img-implement, #img-simple{
+    width: 550px;
+  }
+  #img-implement img{
+    margin-left: 0;
+    padding-top: 20px;
+    position: relative;
+    right: 50px;
+  }
+  .feature{
+    padding: 0;
+  }
+  .feature:nth-child(1){
+    display: flex;
+  }
+  .feature:nth-child(1) .content-wrapper{
+    padding-left: 25px;
+  } 
+  .feature:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .feature p{
+    max-width:425px
+  }
+  #img-simple img{
+    transform: scale(2);
+  }
+  #fourth-section .content-wrapper, #fourth-section p{
+    width: 335px;
+    text-align: center;
+  }
+}
 </style>

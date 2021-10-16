@@ -45,7 +45,7 @@ header > img:hover{
     z-index: 1;
     height: 100vh;
     transition: transform 500ms ease-in-out;
-    transform: translateX(0px);
+    transform: translateX(300px);
     opacity: 0;
 }
 .show-mobile-menu{
@@ -90,7 +90,7 @@ header > img:hover{
 }
 @media screen and (min-width:768px) {
     header{
-        max-width: clamp(690px, 80vw, 1110px);
+        max-width: clamp(690px, 90vw, 1110px);
     }
     header > img, #nav-wrapper > img{
         display: none;
