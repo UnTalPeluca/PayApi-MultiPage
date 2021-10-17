@@ -61,7 +61,7 @@ a{
   font-weight: bold;
 }
 #app{
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Public Sans', sans-serif;
 }
 button{
   font-family: 'Public Sans', sans-serif;
@@ -108,7 +108,7 @@ Footer{
   }
   .footer-input .title{
     margin: 0;
-    margin-right: 200px;
+    margin-right: 225px;
   }
 }
 </style>
