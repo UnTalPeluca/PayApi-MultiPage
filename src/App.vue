@@ -17,6 +17,16 @@ export default {
     Header,
     InputEmail,
     Footer,
+  },
+  watch: {
+    $route(to, from) {
+      let body = document.querySelector("body")
+      if(to.name == "Home"){
+        body.classList.remove("bg-pages")
+      }else{
+        body.classList.add("bg-pages")
+      }
+    }
   }
 }
 </script>
@@ -33,6 +43,9 @@ font-family: 'Public Sans', sans-serif;*/
   --primary-btn-disabled:rgba(186, 66, 112, 0.1);
   --text-color: rgb(108, 130, 148);
   --text-color-alt: rgba(251, 252, 254, 0.7);
+  --placeholdername: #36536B;
+  --placeholderemail: #36536B;
+  --placeholdermessage: #36536B;
 }
 *{
   margin: 0;
@@ -52,7 +65,11 @@ body{
   background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: -500px;
+  background-position-y: -550px;
+}
+.bg-pages{
+  background-position-x: calc(67% + 325px);
+  background-position-y: -650px;
 }
 a{
   color: var(--text-color-alt);
@@ -87,11 +104,19 @@ Footer{
     letter-spacing: -0.37px;
     padding-bottom: 25px;
   }
+  .bg-pages{
+    background-position-x: calc(67% + 520px);
+    background-position-y: -475px;
+  }
 }
 @media screen and (min-width:1280px) {
   body{
-    background-position-x: 750px;
+    background-position-x: calc(67% + 400px);
     background-position-y: -200px;
+  }
+  .bg-pages{
+    background-position-x: calc(67% + 350px);
+    background-position-y: -510px;
   }
   body p, .title{
       text-align: start;

@@ -92,6 +92,11 @@ button{
     line-height: 32px;
     opacity: 0.5;
 }
+.plan button:hover{
+    cursor: pointer;
+    background-color: var(--bg-secondary);
+    color: white;
+}
 .feature-on{
     color: var(--title-color);
     opacity: 1;

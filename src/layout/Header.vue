@@ -9,7 +9,7 @@
                 <router-link @click="isMenuOpen = false" to="/about">About</router-link>
                 <router-link @click="isMenuOpen = false" to="/contact">Contact</router-link>
             </div>
-            <button @click="isMenuOpen = false" class="submit-button">Schedule a Demo</button>
+            <button @click="onButtonClick" class="submit-button">Schedule a Demo</button>
         </div> 
     </header>
 </template>
@@ -21,10 +21,21 @@ export default {
           isMenuOpen: false,
       }
   },
+  methods: {
+      onButtonClick: function(){
+        this.isMenuOpen = false
+        this.$router.push('/')
+      }
+  }
 }
 </script>
 <style scoped>
+#nav-wrapper a:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
 header{
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +47,6 @@ header > img:hover{
     cursor: pointer;
 }
 #nav-bar{
-    position: fixed;
     top: 0;
     right: 0;
     background-color: var(--bg-secondary);
@@ -44,14 +54,13 @@ header > img:hover{
     font-size: 2rem;
     z-index: 1;
     height: 100vh;
-    transition: transform 500ms ease-in-out;
-    transform: translateX(300px);
-    opacity: 0;
+    position: fixed;
 }
 .show-mobile-menu{
     display: block;
-    opacity: 1!important;
-    transform: translateX(0)!important;
+}
+.hide-mobile-menu{
+    display: none;
 }
 #nav-wrapper{
     display: flex;

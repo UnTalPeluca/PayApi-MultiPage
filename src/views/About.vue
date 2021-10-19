@@ -160,5 +160,11 @@ article .title{
   article p{
     width: 635px;
   }
+  #about{
+    background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(30% + -700px);
+    background-position-y: 525px;
+  }
 }
 </style>

@@ -112,12 +112,19 @@ export default {
     font-weight: bold;
     color: var(--text-color);
   }
+   #first-section span:hover{
+    opacity: 0.75;
+  }
   #second-section{
     background-color: var(--bg-secondary);
     padding: 75px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -605px;
   }
   .trademarks {
     display: grid;
@@ -163,6 +170,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
   }
   #img-implement img{
     width: clamp(300px, 75vw, 375px);
@@ -229,6 +237,9 @@ export default {
     max-width: 456px;
     margin: auto;
   }
+  #second-section{
+    background-position-y: -580px;
+  }
   #fourth-section{
     flex-direction: row;
     align-items: flex-start;
@@ -261,7 +272,6 @@ export default {
     margin: 0;
   }
   #first-section .content-wrapper .title{
-
     font-size: 7.2rem;
   }
   #first-section img{
@@ -276,6 +286,8 @@ export default {
     justify-content: center;
     text-align: start;
     padding: 100px 0;
+    background-position-x: calc(67% + -680px);
+    background-position-y: -360px;
   }
   #second-section .title{
     padding: 0;
@@ -295,6 +307,7 @@ export default {
     max-width: 1110px;
     margin: auto;
     padding-top: 100px;
+    padding-bottom: 50px;
   }
   #img-implement, #img-simple{
     width: 550px;
@@ -329,6 +342,12 @@ export default {
   #fourth-section .content-wrapper, #fourth-section p{
     width: 335px;
     text-align: center;
+  }
+  #home{
+    background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(67% + 600px);
+    background-position-y: 1450px;
   }
 }
 </style>

@@ -19,6 +19,9 @@
 router-link{
     color: red;
 }
+.footer-links a:hover{
+    opacity: 0.75;
+}
 footer{
     background-color: var(--bg-secondary);
     background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
