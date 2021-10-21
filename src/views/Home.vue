@@ -273,9 +273,11 @@ export default {
   }
   #first-section .content-wrapper .title{
     font-size: 7.2rem;
+    line-height: 7.2rem;
   }
   #first-section img{
     width: 400px;
+    transform: scale(1.1);
   }
   #first-section p{
     padding-left: 25px;
@@ -308,6 +310,9 @@ export default {
     margin: auto;
     padding-top: 100px;
     padding-bottom: 50px;
+  }
+  #third-section .title{
+    padding-bottom: 10px;
   }
   #img-implement, #img-simple{
     width: 550px;

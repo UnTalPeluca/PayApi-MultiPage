@@ -77,7 +77,7 @@ export default {
                     document.documentElement.style.setProperty(`--placeholder${input.name}`, '#FF0000');
                     isValid = false
                 }else if(isEmail && !isValidEmail(input.value)){
-                    showError(input, "You must enter a valid email")
+                    showError(input, "Please use a valid email address")
                     isValid = false
                 }
                 else if (!hasEnoughLength(input.value.length)){
